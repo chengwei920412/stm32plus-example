@@ -4,7 +4,7 @@ set(MCU_FAMILY f4 CACHE STRING "MCU family")
 set(MCU_HSE 8000000 CACHE STRING "MCU crystal (MHz)")
 
 set(STM32PLUS_CONFIGURATION small-${MCU_FAMILY}-${MCU_HSE})
-find_package(stm32plus 030500 REQUIRED)
+find_package(stm32plus REQUIRED)
 include_directories(${STM32PLUS_INCLUDE_DIRS})
 
 project(blink C CXX ASM)
